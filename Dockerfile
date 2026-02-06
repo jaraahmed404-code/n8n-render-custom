@@ -1,5 +1,4 @@
-#FROM node:20-bullseye
-FROM n8nio/n8n:latest
+FROM node:20-bullseye
 
 # Install system tools
 RUN apt-get update && apt-get install -y \
@@ -21,8 +20,7 @@ RUN useradd -ms /bin/bash n8n
 
 USER n8n
 
-WORKDIR /home/node/.n8n   
-#/home/n8n
+WORKDIR /home/n8n
 
 EXPOSE 5678
 
